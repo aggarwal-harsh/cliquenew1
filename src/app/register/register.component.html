@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+	
+    <title> Login Form</title>
+    
+		
+	</head>
+	<style>
+			body {
+					background-image: url("assets/img/1.jpg");
+			}
+			</style>
+	
+<body >
+		<div class="loginBox">
+			
+			<h2>Register Here </h2>
+			<div class="alert alert-success" *ngIf="form_insert_msg!=''">
+				{{form_insert_msg}}
+			  </div>
+			<form [formGroup]="form" (ngSubmit)="singup()">
+				<p>First name</p>
+				<input type="text" formControlName="f_name" placeholder="Enter Username">
+				<div *ngIf="form.controls.f_name.touched && !form.controls.f_name.valid" class="alert alert-danger">
+					f_name is required
+				  </div>
+				<p>Last name</p>
+				<input type="text" formControlName="l_name" placeholder="Enter Username">
+				<div *ngIf="form.controls.l_name.touched && !form.controls.l_name.valid" class="alert alert-danger">
+					l_name is required
+				  </div>
+				<p>Email</p>
+				<input type="email" formControlName="username" placeholder="Enter Email">
+				<div *ngIf="form.controls.username.touched && !form.controls.username.valid" class="alert alert-danger">
+					email is required
+				  </div> 
+				<p>Password</p>
+				<input type="password" formControlName="password" placeholder="••••••">
+				<div *ngIf="form.controls.password.touched && !form.controls.password.valid" class="alert alert-danger">
+					f_name is required
+				  </div>
+				<input type="submit" [disabled]="form.invalid" value="Sign Up">
+			</form>
+				   <p style="color: black"> <a routerLink= "/login.html/">Already Registered?</a></p>
+			  
+			
+		</div>
+	</body>
+</html>
+

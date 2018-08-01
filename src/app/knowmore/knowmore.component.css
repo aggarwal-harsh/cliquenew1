@@ -1,0 +1,29 @@
+
+
+.new{
+    padding-left: 100px;
+    padding-bottom: 200px;
+    
+}
+.text-center{
+    padding-bottom: 200px;
+}
+.m1{
+    
+        border-radius: 50%!important;
+        vertical-align: middle;
+        border-style: none;
+        
+}
+.new1{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.h2{
+    padding-top: 40px;
+}
